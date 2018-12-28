@@ -47,6 +47,11 @@ sudo wget -O /opt/popcorntime/popcorn.png https://upload.wikimedia.org/wikipedia
 # clean up
 sudo chown -R $USER ~/Pictures/
 sudo rm ~/Downloads/pia* ~/Downloads/par* ~/Downloads/Pop*
+# scraper
+wget https://github.com/sselph/scraper/releases/download/v1.4.6/scraper_linux_amd64.zip
+unzip scraper_linux_amd64.zip 
+sudo mv scraper /bin/
+rm LICENSE.txt rm scraper_linux_amd64.zip
 # retropie
 sudo apt-get install -y git dialog unzip xmlstarlet
 cd ../..
