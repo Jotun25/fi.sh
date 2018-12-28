@@ -11,7 +11,7 @@ sudo add-apt-repository ppa:mozillateam/firefox-next
 # xorg-edgers
 sudo add-apt-repository ppa:xorg-edgers/ppa 
 # INSTALL new apps #
-sudo apt-get install kodi pithos psensor torbrowser-launcher torchat arc-gtk-theme pop-icon-theme breeze-cursor-theme
+sudo apt-get install ufw gufw transmission kodi pithos psensor torbrowser-launcher torchat adapta-gtk-theme pop-icon-theme breeze-cursor-theme
 #  wget
 wget https://s3.amazonaws.com/parsec-build/package/parsec-linux.deb
 wget https://installers.privateinternetaccess.com/download/pia-linux-0.9.7-beta-02034.run
@@ -19,11 +19,15 @@ wget https://i.redd.it/ytqloiszz6611.jpg
 wget http://odinico.com/wp-content/uploads/2017/11/odin_transparent.png
 # move
 mv ytqloiszz6611.jpg ../Pictures/wallpaper
-mv odin_transparent.png ../Pictures/user_img 
+mv odin_transparent.png ../Pictures/user_img
+sudo cp ~/Pictures/wallpaper /usr/share/backgrounds/witcher
+ 
 # INSTALL deb files from directory #
 chmod +x *.run
-sudo ./*.run
 sudo dpkg -i *.deb
+sudo chown -R $USER *.run
+./pia-linux-0.9.7-beta-02034.run
+sudo chown -R $USER ~/Pictures/ 
 # popcorntime
 sudo apt install libcanberra-gtk-module libgconf-2-4
 wget https://mirror02.popcorntime.sh/build/Popcorn-Time-0.3.10-Linux-64.tar.xz
